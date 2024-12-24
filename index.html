@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Slick slider -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+  </head>
+
+  <body>
+    <div class="home-container">
+      <!-- top org logo and user info -->
+      <div class="top-contaiener">
+        <div class="top-left">
+          <span>
+            <img
+              src="./images/logo-light.png"
+              alt=""
+              height="55px"
+              width="100px"
+            />
+          </span>
+          <span class="heading"> SONA BLW PRECISION FORGINGS LIMITED </span>
+        </div>
+        <div iv class="top-right">
+          <div class="search-box">
+            <div class="wrapper">
+              <div class="searchBar">
+                <input
+                  id="searchQueryInput"
+                  type="text"
+                  name="searchQueryInput"
+                  placeholder="Search"
+                  value=""
+                />
+                <button
+                  id="searchQuerySubmit"
+                  type="submit"
+                  name="searchQuerySubmit"
+                >
+                  <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                    <path
+                      fill="#666666"
+                      d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="user">
+            <div class="user-info">
+              <ul>
+                <li class="user-name">Name</li>
+                <li class="user-title">some role</li>
+              </ul>
+            </div>
+            <div class="user-logo">
+              <img src="./images/userphoto.jpg" alt="" class="user-logo-img" />
+            </div>
+            <div class="ham-icon" onclick="openNav()">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- navbar -->
+      <!-- side panel -->
+      <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <ul class="mobile-links">
+          <li style="border-bottom: unset">
+            <div class="mob-searchbox">
+              <div class="mob-wrapper">
+                <input
+                  id="searchQueryInput"
+                  class="searchQueryInput"
+                  type="text"
+                  name="searchQueryInput"
+                  placeholder="Search"
+                  value=""
+                />
+                <button
+                  id="searchQuerySubmit"
+                  type="submit"
+                  name="searchQuerySubmit"
+                >
+                  <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                    <path
+                      fill="#666666"
+                      d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li>Dashboard</li>
+          <li onclick="toggleDropdown(event)">
+            Management <i class="fa-solid fa-sort-down"></i>
+            <ul class="links-dropdown" id="mobile-dropdown">
+              <li>
+                <div class="subnav-heading">OUR LEADERSHIP</div>
+                <ul>
+                  <li>Excecutive Managerment</li>
+                  <li>Board of Directors</li>
+                  <li>CEO Newsletter</li>
+                </ul>
+              </li>
+              <li>
+                <div class="subnav-heading">OUR VISION</div>
+                <ul>
+                  <li>Mission and values</li>
+                  <li>The REC Way: Code of Conduct</li>
+                  <li>Environment, Social and Governance</li>
+                </ul>
+              </li>
+              <li>
+                <div class="subnav-heading">OUR FAMILY</div>
+                <ul>
+                  <li>Companies in the family</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li onclick="toggleDropdown(event)">
+            CBG<i class="fa-solid fa-sort-down"></i>
+            <ul class="links-dropdown" id="mobile-dropdown">
+              <li>
+                <div class="subnav-heading">OUR VISION</div>
+                <ul>
+                  <li>Mission and values</li>
+                  <li>The Noventiq Way: Code of Conduct</li>
+                  <li>Environment, Social and Governance</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li onclick="toggleDropdown(event)">
+            PRODUCT DEVELOPMENT<i class="fa-solid fa-sort-down"></i>
+            <ul class="links-dropdown" id="mobile-dropdown">
+              <li>Mission and values</li>
+              <li>The Noventiq Way: Code of Conduct</li>
+              <li>Environment, Social and Governance</li>
+            </ul>
+          </li>
+          <li>PROGRAM MANAGEMENT</li>
+          <li>QUALITY</li>
+          <li>IT</li>
+          <li>WEB MALL</li>
+        </ul>
+      </div>
+      <!-- side panel end -->
+      <nav class="navbar-container">
+        <ul class="navbar-links">
+          <li><a href="#">DASHBOARD</a></li>
+          <li>
+            <a href="#">MANAGEMENT</a>
+            <ul class="subnav division-subnav">
+              <div class="subnav-container">
+                <div class="subnav-subcontainer">
+                  <div class="subnav-heading">OUR LEADERSHIP</div>
+                  <ul>
+                    <li>Excecutive Managerment</li>
+                    <li>Board of Directors</li>
+                    <li>CEO Newsletter</li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="subnav-subcontainer">
+                    <div class="subnav-heading">OUR VISION</div>
+                    <ul>
+                      <li>Mission and values</li>
+                      <li>The REC Way: Code of Conduct</li>
+                      <li>Environment, Social and Governance</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <div class="subnav-subcontainer">
+                    <div class="subnav-heading">OUR FAMILY</div>
+                    <ul>
+                      <li>Companies in the family</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </li>
+          <li>
+            <a href="#">CBG</a>
+            <ul class="subnav division-subnav">
+              <div class="subnav-container">
+                <div class="subnav-subcontainer">
+                  <div class="subnav-heading">OUR LEADERSHIP</div>
+                  <ul>
+                    <li>Excecutive Managerment</li>
+                    <li>Board of Directors</li>
+                    <li>CEO Newsletter</li>
+                  </ul>
+                </div>
+              </div>
+            </ul>
+          </li>
+          <li>
+            <a href="#">PRODUCT DEVELOPMENT</a>
+            <ul class="subnav division-subnav">
+              <div class="subnav-container">
+                <div class="subnav-subcontainer">
+                  <div class="subnav-heading">OUR VISION</div>
+                  <ul>
+                    <li>Mission & Values</li>
+                    <li>The REC Way : Code of Conduct</li>
+                    <li>Environment, Social and Governance</li>
+                  </ul>
+                </div>
+              </div>
+            </ul>
+          </li>
+          <li>
+            <a href="#">PROGRAM MANAGEMENT</a>
+            <ul class="subnav division-subnav">
+              <div class="subnav-container">
+                <div class="subnav-subcontainer">
+                  <div class="subnav-heading">OUR Family</div>
+                  <ul>
+                    <li>Companies in the family</li>
+                  </ul>
+                </div>
+              </div>
+            </ul>
+          </li>
+          <li><a href="#">QUALITY</a></li>
+          <li><a href="#">IT</a></li>
+          <li style="background-color: white">
+            <a href="#" style="color: black; font-weight: 600">WEB MALL</a>
+          </li>
+        </ul>
+        <ul class="navbar-icons">
+          <li style="padding: 0 !important" class="img-icons">
+            <img src="./images/logos/fb.png" alt="" />
+            <img src="./images/logos/insta.png" alt="" />
+            <img src="./images/logos/linkedin.png" alt="" />
+            <img src="./images/logos/x.jpg" alt="" style="height: 30px" />
+          </li>
+          <li class="lang">
+            <span class="lang-eng"> Eng </span>/
+            <span class="lang-hindi"> हिन्दी </span>
+          </li>
+          <li style="padding: 0 !important">
+            <div class="font-sizes">
+              <span class="font-big">A</span>
+              <span class="font-mid">A</span>
+              <span class="font-small">A</span>
+            </div>
+          </li>
+        </ul>
+        <div class="nav-dots">
+          <i class="fa-solid fa-ellipsis"></i>
+          <ul class="subnav subnav-icons">
+            <div class="subnav-container">
+              <div class="subnav-subcontainer">
+                <ul class="dots-subcontainer">
+                  <li style="padding: 0 !important" class="img-icons">
+                    <img src="./images/logos/fb.png" alt="" />
+                    <img src="./images/logos/insta.png" alt="" />
+                    <img src="./images/logos/linkedin.png" alt="" />
+                    <img
+                      src="./images/logos/x.jpg"
+                      alt=""
+                      style="height: 30px"
+                    />
+                  </li>
+                  <li class="lang">
+                    <span class="lang-eng"> Eng </span>/
+                    <span class="lang-hindi"> हिन्दी </span>
+                  </li>
+                  <li style="padding: 0 0 6px 0 !important">
+                    <div class="font-sizes">
+                      <span class="font-big">A</span>
+                      <span class="font-mid">A</span>
+                      <span class="font-small">A</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </nav>
+      <!-- Notice -->
+      <div class="announcement-container">
+        <div class="announcement-div">
+          <div class="announce-left">Announcements :</div>
+          <div class="announce-right">
+            <marquee behavior="sliding" direction="left">
+              Sona Comstar entered into an agreement to acquire Escorts Kubota's
+              Railway Equipment Division
+            </marquee>
+          </div>
+        </div>
+      </div>
+      <!-- hero container -->
+      <div class="hero-container">
+        <div class="hero-left">
+          <div class="hero-images">
+            <div class="slider">
+              <div><img src="./images/hero-images/RECIMG1.jpeg" alt="" /></div>
+              <div><img src="./images/hero-images/RECIMG2.jpeg" alt="" /></div>
+              <div><img src="./images/hero-images/RECIMG3.jpeg" alt="" /></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="block">
+            <div class="block-main-heading">
+              <i class="fa-solid fa-bullhorn" style="color: white"></i>
+              Recent/Important Notices
+            </div>
+            <div class="content" style="height: 79.4%; overflow: hidden">
+              <ul>
+                <marquee behavior="sliding" direction="up">
+                  <li>
+                    <i class="fa-solid fa-microphone"></i>
+                    <p>
+                      Sona Comstar entered into an agreement to acquire Escorts
+                      Kubota's Railway Equipment Division for ₹1,600 crore. This
+                      strategic move is part of the company's efforts to
+                      diversify its mobility offerings beyond the automotive
+                      sector
+                    </p>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-microphone"></i>
+                    <p>
+                      : As of December 2024, Sona Comstar is actively engaging
+                      with automakers in China, Japan, and South Korea to supply
+                      components for electric, hybrid, and internal combustion
+                      engine vehicles.
+                    </p>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-microphone"></i>
+                    <p>
+                      The company aims for these markets to contribute over half
+                      of its revenues within the next five years, shifting focus
+                      from its traditional markets in North America and Europe.
+                    </p>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-microphone"></i>
+                    <p>
+                      In the first half of the fiscal year 2025, Sona Comstar
+                      added two new EV programs and onboarded two new customers,
+                      bringing its total awarded programs to 36.
+                    </p>
+                  </li>
+                </marquee>
+              </ul>
+            </div>
+            <div class="bottom-link">view more...</div>
+          </div>
+        </div>
+      </div>
+      <!-- Second layer -->
+      <div class="layer-two-container">
+        <div class="divs-second-layer">
+          <div class="layer-two-left">
+            <div class="divs-container" style="height: 20.2rem">
+              <div class="divs-left">
+                <div class="first" style="height: 20rem">HUMAN RESOURCES</div>
+              </div>
+              <div class="divs-right">
+                <div class="second">ADMIN</div>
+                <div class="third">ECC OLD</div>
+                <div class="forth">ECC NEW</div>
+                <div class="fifth">SPE</div>
+              </div>
+            </div>
+          </div>
+          <div class="layer-two-right">
+            <div class="divs-container1">
+              <div class="link-divs">
+                <div
+                  style="
+                    background-image: url('./images/online-documentation-database-document-management-260nw-2305109169.jpg');
+                  "
+                ></div>
+                <div>Manufacturing</div>
+              </div>
+              <div class="link-divs">
+                <div style="background-image: url(./images/rwfrfs.jpg)"></div>
+                <div>Maintenance</div>
+              </div>
+              <div class="link-divs">
+                <div
+                  style="background-image: url('./images/sdfgsdfg.jpg')"
+                ></div>
+                <div>MSE</div>
+              </div>
+              <div class="link-divs">
+                <div
+                  style="
+                    background-image: url('./images/online-school-equipment-home_23-2149041150.avif');
+                  "
+                ></div>
+                <div>Quality</div>
+              </div>
+              <div class="link-divs">
+                <div
+                  style="
+                    background-image: url('./images/Modern-Office-Interior-with-Open-Floor-Plan-2048x1365.webp');
+                  "
+                ></div>
+                <div>Customer Support</div>
+              </div>
+              <div class="link-divs">
+                <div
+                  style="background-image: url('./images/desk-b1.jpg')"
+                ></div>
+                <div>Purchase</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- THIRD LAYER  -->
+      <div class="layer-two-container third-layer">
+        <div class="divs-second-layer third-subcontainer">
+          <div class="layer-two-left">
+            <div class="block-container">
+              <div>
+                <div class="block">
+                  <div class="block-main-heading">
+                    <i class="fa-solid fa-link" style="color: white"></i>
+                    QUICK LINKS
+                  </div>
+                  <div class="content">
+                    <ul>
+                      <li>
+                        <i class="fa-solid fa-pen-clip"></i>
+                        <p>
+                          Basic strategies to manage your finances effectively.
+                        </p>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-pen-clip"></i>
+                        <p>
+                          Explore safe and profitable investment opportunities.
+                        </p>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-pen-clip"></i>
+                        <p>
+                          Step-by-step instructions on writing a comprehensive
+                          research paper.
+                        </p>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-pen-clip"></i>
+                        <p>Fun and easy projects to improve your home.</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bottom-link">view more...</div>
+                </div>
+              </div>
+              <div>
+                <div class="block">
+                  <div class="block-main-heading">
+                    <i class="fa-solid fa-tag" style="color: white"></i>
+                    USEFUL LINKS
+                  </div>
+                  <div class="content">
+                    <ul>
+                      <li>
+                        <i class="fa-solid fa-pen-clip"></i>
+                        <p>Intranet Portal Screen.pdf</p>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-pen-clip"></i>
+                        <p>Free_Test_Data_500KB_PDF.pdf</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bottom-link">view more...</div>
+                </div>
+              </div>
+              <div>
+                <div class="block">
+                  <div class="block-main-heading">
+                    <i></i>
+                    EHS
+                  </div>
+                  <div class="content">
+                    <ul>
+                      <li>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <p>
+                          Sona Comstar is proud to announce the acquisition of
+                          Escorts Kubota's Railway Equipment Division for ₹1,600
+                          crore, marking a significant step towards diversifying
+                          its mobility solutions.
+                        </p>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <p>
+                          In a strategic move to expand its global footprint,
+                          Sona Comstar is collaborating with automakers in East
+                          Asia, focusing on electric and hybrid vehicle
+                          components.
+                        </p>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <p>
+                          With the addition of two new EV programs and two new
+                          customers, Sona Comstar now boasts a total of 36
+                          awarded programs in its EV portfolio, further
+                          solidifying its leadership in the electric vehicle
+                          industry.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bottom-link">view more...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layer-two-right">
+            <div class="layer-two-right-container">
+              <div class="block">
+                <div class="col-flex">
+                  <div class="box">
+                    <div class="block bday">
+                      <div class="block-main-heading">
+                        <i></i>
+                        BIRTHDAYS
+                      </div>
+                      <div class="birthdaySuperannuation-content">
+                        <div class="content" style="height: 100%">
+                          <ul>
+                            <li>
+                              <i class="fa-solid fa-cake-candles"></i>
+                              <p>Emily Green - January 5th</p>
+                            </li>
+                            <li>
+                              <i class="fa-solid fa-cake-candles"></i>
+                              <p>John Doe - February 14th</p>
+                            </li>
+                            <li>
+                              <i class="fa-solid fa-cake-candles"></i>
+                              <p>Sarah White - March 22nd</p>
+                            </li>
+                            <li>
+                              <i class="fa-solid fa-cake-candles"></i>
+                              <p>Jessica Blue - May 18th</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="block annuation">
+                      <div class="block-main-heading">
+                        <i></i>
+                        SUPERANNUATION
+                      </div>
+                      <div class="birthdaySuperannuation-content">
+                        <div class="content" style="height: 100%">
+                          <ul>
+                            <li>
+                              <i class="fa-solid fa-arrow-right"></i>
+                              <p>Jane Smith - Birthdate: 1985-07-15</p>
+                            </li>
+                            <li>
+                              <i class="fa-solid fa-arrow-right"></i>
+                              <p>Michael Johnson - Birthdate: 1978-04-22</p>
+                            </li>
+                            <li>
+                              <i class="fa-solid fa-arrow-right"></i>
+                              <p>Emily Williams - Birthdate: 1990-11-10</p>
+                            </li>
+                            <li>
+                              <i class="fa-solid fa-arrow-right"></i>
+                              <p>Daniel Brown - Birthdate: 1982-09-05</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".slider").slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          prevArrow:
+            '<button type="button" class="slick-prev">Previous</button>',
+          nextArrow: '<button type="button" class="slick-next">Next</button>',
+        });
+      });
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+
+      // mobile dropdown
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+
+      function toggleDropdown(event) {
+        event.stopPropagation(); // Prevent the click from bubbling up to other elements
+        let dropdown = event.currentTarget.querySelector(".links-dropdown");
+        dropdown.classList.toggle("show");
+      }
+
+      document.addEventListener("click", function (event) {
+        // Close all dropdowns if the user clicks outside of them
+        let dropdowns = document.querySelectorAll(".links-dropdown.show");
+        dropdowns.forEach((dropdown) => {
+          if (!dropdown.contains(event.target)) {
+            dropdown.classList.remove("show");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
